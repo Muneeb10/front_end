@@ -77,7 +77,7 @@ const TrackPageViews = ({ children }) => {
   const location = useLocation();
   
   useEffect(() => {
-    window.gtag?.('config', 'AW-17419435593', {
+    window.gtag?.('config', 'AW-17408747407', {
       page_path: location.pathname + location.search,
       page_title: document.title
     });
