@@ -182,7 +182,7 @@ const Form = () => {
         <div className="flex flex-col lg:flex-row gap-10">
           <div className="lg:w-2/3">
             <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8">
-              <h2 className="text-2xl font-bold text-gray-600 mb-6">Personal Information</h2>
+              <h2 className="text-2xl font-bold text-gray-600 mb-6">Personal Information <span className="text-lg font-medium text-lean-500 mb-4">Loan File Fee 1550</span></h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* First Name */}
