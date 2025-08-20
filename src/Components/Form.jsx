@@ -445,7 +445,7 @@ const Form = () => {
                       <img src='https://freesvg.org/img/1612850349easypaisa.png'  className='h-[80px] w-[80px]' />
                     </div>
                     <div>
-                      <div className="text-gray- text-2xl text-bold">03459575063</div>
+                      <div className="text-gray- text-2xl text-bold">03492443739</div>
                     </div>
                   </div>
 
@@ -455,7 +455,7 @@ const Form = () => {
                    <img src='https://iconpusher.com/_next/image?url=https%3A%2F%2Fimg.iconpusher.com%2Fcom.techlogix.mobilinkcustomer%2F6.1.02.png&w=256&q=75'  className='h-[100px] w-[100px]' />
                     </div>
                     <div>
-                     <div className="text-gray- text-2xl text-bold">03459575063</div>
+                     <div className="text-gray- text-2xl text-bold">03447191881</div>
                     </div>
                   </div>
                 </div>
