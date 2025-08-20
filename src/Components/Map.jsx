@@ -25,14 +25,14 @@ const Map = () => {
               <div className="bg-blue-100 p-6 rounded-lg border-l-4 border-blue-500">
                 <h3 className="font-bold text-blue-800 text-lg mb-2">Head Office</h3>
                 <p className="text-blue-700">New Shehbaz Building Thandi Sadak Hydrabad</p>
-                <p className="mt-4 text-blue-700">+92 3354571620</p>
+                <p className="mt-4 text-blue-700">+923308420721</p>
               </div>
               
               {/* Branch 2 */}
               <div className="bg-teal-100 p-6 rounded-lg border-l-4 border-teal-500">
                 <h3 className="font-bold text-green-800 text-lg mb-2">Karachi</h3>
                 <p className="text-green-700">Plot No. 123, Block A, Gulshan-e-Iqbal</p>
-                <p className="mt-4 text-green-700">+92 3354571620</p>
+                <p className="mt-4 text-green-700">+923308420721</p>
               </div>
             </div>
           </div>
