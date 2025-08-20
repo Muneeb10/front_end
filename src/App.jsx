@@ -22,7 +22,7 @@ import ShareSuccessStory from './Components/Share_Success_Story.jsx';
 import ScrollToTop from './Components/ScrollToTop.jsx';
 import Loader from './Components/Loader.jsx';
 import Page_404 from './Components/Page_404.jsx'
-
+import EMICalculator from './Components/EmiCalculator.jsx'
 
 function MainPage() {
   return (
@@ -36,6 +36,13 @@ function MainPage() {
       <div id="contact" className="min-h-screen">
         <Form />
       </div>
+
+      <div>
+
+<EMICalculator />
+
+      </div>
+      
       
       <div id="about" className="min-h-screen">
         <About />
