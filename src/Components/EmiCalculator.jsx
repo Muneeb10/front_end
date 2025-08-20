@@ -22,10 +22,27 @@ export default function EMICalculator() {
     const annualRate = parseFloat(interestRate);
     const N = parseInt(tenure);
 
-    if (!P || !annualRate || !N) {
+    if (!P || isNaN(annualRate) || !N) {
       setEmi(null);
       setChartData([]);
       setIsCalculated(false);
+      return;
+    }
+
+    // Handle zero interest rate case
+    if (annualRate === 0) {
+      const emiValue = P / N;
+      const totalPaymentValue = P; // No interest
+      const totalInterestValue = 0;
+
+      setEmi(emiValue.toFixed(2));
+      setTotalInterest(totalInterestValue.toFixed(2));
+      setTotalPayment(totalPaymentValue.toFixed(2));
+
+      setChartData([
+        { name: "Principal", value: P },
+        { name: "Interest", value: 0 },
+      ]);
       return;
     }
 
@@ -57,13 +74,13 @@ export default function EMICalculator() {
   };
 
   const COLORS = ["#029fae", "#f0f2f3"];
-  const formatTooltip = (value) => `₹${value.toLocaleString('en-IN')}`;
+  const formatTooltip = (value) => `PKR ${value.toLocaleString('en-PK')}`;
 
   return (
     <div className="min-h-screen bg-[#f0f2f3] p-4 w-full">
       <div className="bg-white shadow-xl rounded-3xl p-4 md:p-6 lg:p-8 w-full overflow-hidden transition-all duration-300 hover:shadow-2xl mx-auto max-w-6xl">
         <h1 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-6 text-transparent bg-clip-text bg-gradient-to-r from-[#029fae] to-cyan-600">
-          EMI Calculator
+          EMI Calculator (Pakistani Rupee)
         </h1>
         <p className="text-base sm:text-lg text-gray-600 text-center mx-auto max-w-3xl">
           Our EMI Calculator is a powerful financial tool designed to help you make informed decisions about your loans. Whether you're planning for a home loan, car loan, personal loan, or any other type of credit, this calculator provides a clear breakdown of your monthly payments and total loan cost.
@@ -73,7 +90,7 @@ export default function EMICalculator() {
           <div className="space-y-4 sm:space-y-6 w-full">
             <div className="p-4 sm:p-6 rounded-2xl border border-gray-200 w-full">
               <div className="mb-4">
-                <label className="block text-gray-700 font-medium mb-2">Loan Amount (Rs.)</label>
+                <label className="block text-gray-700 font-medium mb-2">Loan Amount (PKR)</label>
                 <input
                   type="number"
                   value={loanAmount}
@@ -128,15 +145,15 @@ export default function EMICalculator() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div className="bg-[#f0f2f3] p-3 sm:p-4 rounded-xl text-center">
                     <p className="text-sm text-gray-700 font-medium">Monthly EMI</p>
-                    <p className="text-lg sm:text-xl font-bold text-gray-900">Rs. {emi}</p>
+                    <p className="text-lg sm:text-xl font-bold text-gray-900">PKR {emi}</p>
                   </div>
                   <div className="bg-[#e0f7fa] p-3 sm:p-4 rounded-xl text-center">
                     <p className="text-sm text-gray-700 font-medium">Total Interest</p>
-                    <p className="text-lg sm:text-xl font-bold text-gray-900">Rs. {totalInterest}</p>
+                    <p className="text-lg sm:text-xl font-bold text-gray-900">PKR {totalInterest}</p>
                   </div>
                   <div className="bg-[#029fae] p-3 sm:p-4 rounded-xl text-center sm:col-span-2">
                     <p className="text-sm text-white font-medium">Total Payment</p>
-                    <p className="text-lg sm:text-xl font-bold text-white">Rs. {totalPayment}</p>
+                    <p className="text-lg sm:text-xl font-bold text-white">PKR {totalPayment}</p>
                   </div>
                 </div>
               </div>
@@ -177,8 +194,8 @@ export default function EMICalculator() {
                   </ResponsiveContainer>
                 </div>
                 <div className="mt-3 sm:mt-4 text-center text-xs sm:text-sm text-gray-600">
-                  <p>Principal: Rs.{parseFloat(loanAmount).toLocaleString('en-IN')}</p>
-                  <p>Interest Payable: Rs.{totalInterest}</p>
+                  <p>Principal: PKR {parseFloat(loanAmount).toLocaleString('en-PK')}</p>
+                  <p>Interest Payable: PKR {totalInterest}</p>
                 </div>
               </div>
             ) : (
