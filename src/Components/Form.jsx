@@ -512,7 +512,7 @@ const Form = () => {
                     <div className="bg-teal-500/20 p-3 rounded-lg"><PhoneIcon className="h-6 w-6 text-white" /></div>
                     <div>
                       <h3 className="text-lg font-semibold">Phone</h3>
-                      <p className="text-teal-100">+92 335 4571620<br />+92 22 1234567</p>
+                      <p className="text-teal-100">+923308420721<br />+92 22 1234567</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
