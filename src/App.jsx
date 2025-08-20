@@ -33,6 +33,10 @@ function MainPage() {
         <HeroSection />
       </div>
 
+      <div id="contact" className="min-h-screen">
+        <Form />
+      </div>
+      
       <div id="about" className="min-h-screen">
         <About />
       </div>
@@ -56,9 +60,7 @@ function MainPage() {
 
       <ShareSuccessStory />
 
-      <div id="contact" className="min-h-screen">
-        <Form />
-      </div>
+
 
       <Testimonial />
       <Office_Location />
