@@ -128,15 +128,15 @@ export default function EMICalculator() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-[#f0f2f3] p-4 rounded-xl text-center">
                     <p className="text-sm text-gray-700 font-medium">Monthly EMI</p>
-                    <p className="text-xl font-bold text-gray-900">₹ {emi}</p>
+                    <p className="text-xl font-bold text-gray-900">Rs. {emi}</p>
                   </div>
                   <div className="bg-[#e0f7fa] p-4 rounded-xl text-center">
                     <p className="text-sm text-gray-700 font-medium">Total Interest</p>
-                    <p className="text-xl font-bold text-gray-900">₹ {totalInterest}</p>
+                    <p className="text-xl font-bold text-gray-900">Rs. {totalInterest}</p>
                   </div>
                   <div className="bg-[#029fae] p-4 rounded-xl text-center col-span-2">
                     <p className="text-sm text-white font-medium">Total Payment</p>
-                    <p className="text-xl font-bold text-white">₹ {totalPayment}</p>
+                    <p className="text-xl font-bold text-white">Rs. {totalPayment}</p>
                   </div>
                 </div>
               </div>
@@ -177,8 +177,8 @@ export default function EMICalculator() {
                   </ResponsiveContainer>
                 </div>
                 <div className="mt-4 text-center text-sm text-gray-600">
-                  <p>Principal: ₹{parseFloat(loanAmount).toLocaleString('en-IN')}</p>
-                  <p>Interest Payable: ₹{totalInterest}</p>
+                  <p>Principal: Rs.{parseFloat(loanAmount).toLocaleString('en-IN')}</p>
+                  <p>Interest Payable: Rs.{totalInterest}</p>
                 </div>
               </div>
             ) : (
