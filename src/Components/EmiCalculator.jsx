@@ -73,7 +73,7 @@ export default function EMICalculator() {
           <div className="space-y-4 sm:space-y-6 w-full">
             <div className="p-4 sm:p-6 rounded-2xl border border-gray-200 w-full">
               <div className="mb-4">
-                <label className="block text-gray-700 font-medium mb-2">Loan Amount (₹)</label>
+                <label className="block text-gray-700 font-medium mb-2">Loan Amount (Rs.)</label>
                 <input
                   type="number"
                   value={loanAmount}
@@ -128,15 +128,15 @@ export default function EMICalculator() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div className="bg-[#f0f2f3] p-3 sm:p-4 rounded-xl text-center">
                     <p className="text-sm text-gray-700 font-medium">Monthly EMI</p>
-                    <p className="text-lg sm:text-xl font-bold text-gray-900">₹ {emi}</p>
+                    <p className="text-lg sm:text-xl font-bold text-gray-900">Rs. {emi}</p>
                   </div>
                   <div className="bg-[#e0f7fa] p-3 sm:p-4 rounded-xl text-center">
                     <p className="text-sm text-gray-700 font-medium">Total Interest</p>
-                    <p className="text-lg sm:text-xl font-bold text-gray-900">₹ {totalInterest}</p>
+                    <p className="text-lg sm:text-xl font-bold text-gray-900">Rs. {totalInterest}</p>
                   </div>
                   <div className="bg-[#029fae] p-3 sm:p-4 rounded-xl text-center sm:col-span-2">
                     <p className="text-sm text-white font-medium">Total Payment</p>
-                    <p className="text-lg sm:text-xl font-bold text-white">₹ {totalPayment}</p>
+                    <p className="text-lg sm:text-xl font-bold text-white">Rs. {totalPayment}</p>
                   </div>
                 </div>
               </div>
@@ -177,8 +177,8 @@ export default function EMICalculator() {
                   </ResponsiveContainer>
                 </div>
                 <div className="mt-3 sm:mt-4 text-center text-xs sm:text-sm text-gray-600">
-                  <p>Principal: ₹{parseFloat(loanAmount).toLocaleString('en-IN')}</p>
-                  <p>Interest Payable: ₹{totalInterest}</p>
+                  <p>Principal: Rs.{parseFloat(loanAmount).toLocaleString('en-IN')}</p>
+                  <p>Interest Payable: Rs.{totalInterest}</p>
                 </div>
               </div>
             ) : (
