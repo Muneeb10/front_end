@@ -14,7 +14,7 @@ const Footer = () => {
   const contactInfo = [
     { icon: <MapPinIcon className="w-6 h-6 text-teal-500" />, text: 'New Shehbaz Building Thandi Sadak Hydrabad' },
     { icon: <EnvelopeIcon className="w-6 h-6 text-teal-500" />, text: 'Info@alkhidmatfoundation.online' },
-    { icon: <PhoneIcon className="w-6 h-6 text-teal-500" />, text: '+92 3354571620' }
+    { icon: <PhoneIcon className="w-6 h-6 text-teal-500" />, text: '+923308420721' }
   ];
 
   return (
